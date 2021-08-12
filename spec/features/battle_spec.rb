@@ -7,11 +7,7 @@ describe 'Battle', type: :feature do
   end
 
   it 'fills, submits and returns names' do
-    visit ('/')
-    # within("#form") 
-    fill_in 'player_1', with: 'Bob'
-    fill_in 'player_2', with: 'Tom'
-    click_button 'Submit'
-    expect(page).to have_content "Bob and Tom will be playing Battle!"
+    sign_in_and_play
+    expect(page).to have_content "Dave and John will be playing Battle!"
   end
 end
