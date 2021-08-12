@@ -2,9 +2,9 @@
 <%=$player_1.name%> and <%=$player_2.name%> will be playing Battle!
 </div>
 
-<div>
-  <%=$player_2.name%> HP: 10
-</div>
+  <div>
+    <%=$player_2.name%> HP: <%= $player_2.hp %>
+  </div>
 
 <form action='/attack' method='get'>
   <input type='submit' value='Attack!'>
